@@ -1,136 +1,197 @@
 <!doctype html>
 <html lang="de">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aktenzeichen Trauzeuge</title>
   <meta name="robots" content="noindex, nofollow">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
   <script type="module" src="/src/main.ts"></script>
 </head>
+
 <body>
-<canvas id="konfetti" hidden></canvas>
+  <canvas id="konfetti" hidden></canvas>
 
-<div class="sheet"><div class="inner">
+  <div class="sheet">
+    <div class="inner">
 
-  <div class="kopf">
-    <div class="amt"><b>Amt für Trauzeugenangelegenheiten</b>Dezernat Familie · Referat Cousins</div>
-    <div class="akte">Aktenzeichen <span id="az"></span><br>Datum <span id="datum"></span><br>Bearbeiter <span id="bearbeiter"></span></div>
-  </div>
-
-  <!-- ===== FORMBLATT A: STELLENAUSSCHREIBUNG ===== -->
-  <h1><small>Öffentliche Stellenausschreibung · Formblatt A</small>Trauzeuge (m)<br>gesucht.</h1>
-  <p class="lead">Unbefristet, Vollzeit an einem Tag, ehrenamtlich mit Getränkepauschale. Bewerbungen von Personen, die den Auftraggeber weniger als 28 Jahre kennen, werden nicht berücksichtigt.</p>
-
-  <div class="felder">
-    <div>Stelle</div><div><b>Trauzeuge</b> bei der Hochzeit von <span data-c="auftraggeber"></span> &amp; <span data-c="partner"></span></div>
-    <div>Standort</div><div>Standesamt, Feier, Nachfeier. Genaueres folgt.</div>
-    <div>Beginn</div><div>Sofort. Spätestens nach diesem Bier.</div>
-    <div>Aufgaben</div><div><ul>
-      <li>Junggesellenabschied planen. Ohne Krankenhaus, mit Bier.</li>
-      <li>Ringe am Tag X in der Tasche haben. Beide.</li>
-      <li>Rede halten. Nicht alles erzählen. <s>2014</s> bleibt unter uns.</li>
-      <li>Bräutigam bei Nervosität mit Getränk versorgen.</li>
-      <li>Als Erster bestätigen, dass der Anzug sitzt.</li>
-    </ul></div>
-    <div>Anforderungen</div><div><ul>
-      <li>Cousin. Zwingend.</li>
-      <li>Bester Freund seit Geburt. Nachweise siehe Anlage 1.</li>
-      <li>Trinkfest, schwindelfrei, tanzunfähig ist okay.</li>
-      <li>Erfahrung im Zelt, auf dem Sofa und im Spiegelkabinett von Vorteil.</li>
-    </ul></div>
-    <div>Wir bieten</div><div><ul>
-      <li>Platz in der ersten Reihe.</li>
-      <li>Freibier ab Zusage.</li>
-      <li>Ein Foto, das ihr beiden in 40 Jahren peinlich findet.</li>
-      <li>Lebenslange Dankbarkeit. Nicht kündbar.</li>
-    </ul></div>
-    <div>Bewerber</div><div><b data-c="bewerber"></b> · Einziger Bewerber. Verfahren wurde nicht öffentlich ausgeschrieben.</div>
-  </div>
-
-  <div class="hinweis"><b>Hinweis:</b> Das Etikett auf der Flasche vor dir ist Teil dieser Ausschreibung. Bitte vollständig lesen, dann unten weitermachen.</div>
-
-  <!-- ===== ANLAGE 1: NACHWEISE ===== -->
-  <section id="anlage">
-    <div class="fb"><div class="nr">Anlage<b>1</b></div><h2>Nachweise über langjährige Zusammenarbeit</h2></div>
-    <p class="lead" style="font-size:17px">Dem Amt liegen folgende Belege vor. Die Echtheit wurde nicht geprüft, die Frisuren sprechen für sich.</p>
-    <div class="akten" id="akten"></div>
-  </section>
-
-  <!-- ===== FORMBLATT B: EIGNUNGSTEST ===== -->
-  <section id="test">
-    <div class="fb"><div class="nr">Formblatt<b>B</b></div><h2>Eignungstest</h2></div>
-    <p class="lead" style="font-size:17px">Pflichtteil. Das Ergebnis hat keinen Einfluss auf die Entscheidung, das Amt möchte es nur wissen.</p>
-    <div id="fragen"></div>
-    <div class="ergebnis" id="ergebnis">
-      <div class="score"><span id="score"></span><small>von <span id="max"></span> Punkten</small></div>
-      <p id="urteil" style="margin:0;max-width:34ch;font-size:16px"></p>
-    </div>
-  </section>
-
-  <!-- ===== FORMBLATT C: VERTRAG ===== -->
-  <section id="vertrag">
-    <div class="fb"><div class="nr">Formblatt<b>C</b></div><h2>Trauzeugenvertrag</h2></div>
-    <div class="vertrag">
-      <div class="parteien">
-        <span>Auftraggeber</span><b data-c="auftraggeber"></b>
-        <span>Auftragnehmer</span><b data-c="bewerber"></b>
-        <span>Gegenstand</span><b>Hochzeit <span data-c="auftraggeber"></span> &amp; <span data-c="partner"></span>, <span data-c="hochzeit"></span></b>
+      <div class="kopf">
+        <div class="amt"><b>Amt für Trauzeugenangelegenheiten</b>Dezernat Familie · Referat Cousins</div>
+        <div class="akte">Aktenzeichen <span id="az"></span><br>Datum <span id="datum"></span><br>Bearbeiter <span
+            id="bearbeiter"></span></div>
       </div>
 
-      <div class="para"><h3><span>§ 1</span>Gegenstand</h3><p>Der Auftragnehmer übernimmt das Amt des Trauzeugen. Er tut das nicht, weil er gefragt wurde, sondern weil es nie eine andere Option gab.</p></div>
-      <div class="para"><h3><span>§ 2</span>Pflichten des Auftragnehmers</h3><ol>
-        <li>Anwesenheit am Hochzeitstag, nüchtern bis mindestens zur Unterschrift im Standesamt.</li>
-        <li>Organisation eines Junggesellenabschieds, der am nächsten Tag noch erzählt werden darf.</li>
-        <li>Verwahrung der Ringe. Verlust gilt als grobe Fahrlässigkeit, siehe § 5.</li>
-        <li>Eine Rede. Länge: ein Bier. Inhalt: nach Absprache, Veto-Recht des Auftraggebers bei Vorfällen vor 2016.</li>
-      </ol></div>
-      <div class="para"><h3><span>§ 3</span>Pflichten des Auftraggebers</h3><ol>
-        <li>Getränke am Hochzeitstag und bei allen vorbereitenden Sitzungen.</li>
-        <li>Rechtzeitige Information über Termine, Dresscode und Schwiegereltern.</li>
-        <li>Gegenseitigkeit: Sollte der Auftragnehmer je heiraten, gilt dieser Vertrag spiegelverkehrt.</li>
-      </ol></div>
-      <div class="para"><h3><span>§ 4</span>Vergütung</h3><p>Erfolgt in Naturalien (Bier), Ehre (erste Reihe) und Dankbarkeit (unbegrenzt). Eine Auszahlung in Geld ist ausgeschlossen, wir sind Cousins, nicht Kollegen.</p></div>
-      <div class="para"><h3><span>§ 5</span>Laufzeit und Kündigung</h3><p>Der Vertrag läuft unbefristet und ist von keiner Seite kündbar. Bei Ringverlust wird er trotzdem nicht gekündigt, der Auftraggeber redet dann nur zwei Wochen nicht mit dem Auftragnehmer.</p></div>
-      <div class="para"><h3><span>§ 6</span>Schlussbestimmung</h3><p>Beide Parteien bestätigen, dass dieser Vertrag reine Formsache ist und die Sache seit ungefähr 28 Jahren geklärt war.</p></div>
+      <!-- ===== FORMBLATT A: STELLENAUSSCHREIBUNG ===== -->
+      <h1><small>Öffentliche Stellenausschreibung · Formblatt A</small>Trauzeuge (m)<br>gesucht.</h1>
+      <p class="lead">Unbefristet, Vollzeit an einem Tag, ehrenamtlich mit Getränkepauschale. Bewerbungen von Personen,
+        die den Auftraggeber weniger als 28 Jahre kennen, werden nicht berücksichtigt.</p>
 
-      <div class="unterschriften">
-        <div class="sig fixed">
-          <canvas id="sig-ag" width="600" height="240"></canvas>
-          <div class="vorgedruckt" data-c="auftraggeber"></div>
-          <div class="name"><span>Auftraggeber, <span id="datum2"></span></span></div>
+      <div class="felder">
+        <div>Stelle</div>
+        <div><b>Trauzeuge</b> bei der Hochzeit von <span data-c="auftraggeber"></span> &amp; <span
+            data-c="partner"></span></div>
+        <div>Standort</div>
+        <div>Standesamt, Feier, Nachfeier. Genaueres folgt.</div>
+        <div>Beginn</div>
+        <div>Sofort. Spätestens nach diesem Bier.</div>
+        <div>Aufgaben</div>
+        <div>
+          <ul>
+            <li>Junggesellenabschied planen. Ohne Krankenhaus, mit Bier.</li>
+            <li>Ringe am Tag X in der Tasche haben. Beide.</li>
+            <li>Rede halten. Nicht alles erzählen. <s>???</s> bleibt unter uns.</li>
+            <li>Bräutigam bei Nervosität mit Getränk versorgen.</li>
+            <li>Als Erster bestätigen, dass der Anzug sitzt.</li>
+          </ul>
         </div>
-        <div class="sig" id="sig-wrap">
-          <canvas id="sig-an" width="600" height="240"></canvas>
-          <div class="hint">Hier unterschreiben (Finger oder Maus)</div>
-          <div class="name"><span>Auftragnehmer</span><button type="button" id="sig-clear">Nochmal</button></div>
+        <div>Anforderungen</div>
+        <div>
+          <ul>
+            <li>Cousin. Zwingend.</li>
+            <li>Bester Freund seit Geburt. Nachweise siehe Anlage 1.</li>
+            <li>Trinkfest, schwindelfrei, tanzunfähig ist okay.</li>
+            <li>Erfahrung im Zelt, auf dem Sofa und im Spiegelkabinett von Vorteil.</li>
+          </ul>
         </div>
+        <div>Wir bieten</div>
+        <div>
+          <ul>
+            <li>Platz in der ersten Reihe.</li>
+            <li>Freibier ab Zusage.</li>
+            <li>Ein Foto, das ihr beiden in 40 Jahren peinlich findet.</li>
+            <li>Lebenslange Dankbarkeit. Nicht kündbar.</li>
+          </ul>
+        </div>
+        <div>Bewerber</div>
+        <div><b data-c="bewerber"></b> · Einziger Bewerber. Verfahren wurde nicht öffentlich ausgeschrieben.</div>
       </div>
+
+      <div class="hinweis"><b>Hinweis:</b> Das Etikett auf der Flasche vor dir ist Teil dieser Ausschreibung. Bitte
+        vollständig lesen, dann unten weitermachen.</div>
+
+      <!-- ===== ANLAGE 1: NACHWEISE ===== -->
+      <section id="anlage">
+        <div class="fb">
+          <div class="nr">Anlage<b>1</b></div>
+          <h2>Nachweise über langjährige Zusammenarbeit</h2>
+        </div>
+        <p class="lead" style="font-size:17px">Dem Amt liegen folgende Belege vor. Die Echtheit wurde nicht geprüft, die
+          Frisuren sprechen für sich.</p>
+        <div class="akten" id="akten"></div>
+      </section>
+
+      <!-- ===== FORMBLATT B: EIGNUNGSTEST ===== -->
+      <section id="test">
+        <div class="fb">
+          <div class="nr">Formblatt<b>B</b></div>
+          <h2>Eignungstest</h2>
+        </div>
+        <p class="lead" style="font-size:17px">Pflichtteil. Das Ergebnis hat keinen Einfluss auf die Entscheidung, das
+          Amt möchte es nur wissen.</p>
+        <div id="fragen"></div>
+        <div class="ergebnis" id="ergebnis">
+          <div class="score"><span id="score"></span><small>von <span id="max"></span> Punkten</small></div>
+          <p id="urteil" style="margin:0;max-width:34ch;font-size:16px"></p>
+        </div>
+      </section>
+
+      <!-- ===== FORMBLATT C: VERTRAG ===== -->
+      <section id="vertrag">
+        <div class="fb">
+          <div class="nr">Formblatt<b>C</b></div>
+          <h2>Trauzeugenvertrag</h2>
+        </div>
+        <div class="vertrag">
+          <div class="parteien">
+            <span>Auftraggeber</span><b data-c="auftraggeber"></b>
+            <span>Auftragnehmer</span><b data-c="bewerber"></b>
+            <span>Gegenstand</span><b>Hochzeit <span data-c="auftraggeber"></span> &amp; <span data-c="partner"></span>,
+              <span data-c="hochzeit"></span></b>
+          </div>
+
+          <div class="para">
+            <h3><span>§ 1</span>Gegenstand</h3>
+            <p>Der Auftragnehmer übernimmt das Amt des Trauzeugen. Er tut das nicht, weil er gefragt wurde, sondern weil
+              es nie eine andere Option gab.</p>
+          </div>
+          <div class="para">
+            <h3><span>§ 2</span>Pflichten des Auftragnehmers</h3>
+            <ol>
+              <li>Anwesenheit am Hochzeitstag, nüchtern bis mindestens zur Unterschrift im Standesamt.</li>
+              <li>Organisation eines Junggesellenabschieds, der am nächsten Tag noch erzählt werden darf.</li>
+              <li>Verwahrung der Ringe. Verlust gilt als grobe Fahrlässigkeit, siehe § 5.</li>
+              <li>Eine Rede. Länge: ein Bier. Inhalt: nach Absprache, Veto-Recht des Auftraggebers bei Vorfällen vor
+                2016.</li>
+            </ol>
+          </div>
+          <div class="para">
+            <h3><span>§ 3</span>Pflichten des Auftraggebers</h3>
+            <ol>
+              <li>Getränke am Hochzeitstag und bei allen vorbereitenden Sitzungen.</li>
+              <li>Rechtzeitige Information über Termine, Dresscode und Schwiegereltern.</li>
+              <li>Gegenseitigkeit: Sollte der Auftragnehmer je heiraten, gilt dieser Vertrag spiegelverkehrt.</li>
+            </ol>
+          </div>
+          <div class="para">
+            <h3><span>§ 4</span>Vergütung</h3>
+            <p>Erfolgt in Naturalien (Bier), Ehre (erste Reihe) und Dankbarkeit (unbegrenzt). Eine Auszahlung in Geld
+              ist ausgeschlossen, wir sind Cousins, nicht Kollegen.</p>
+          </div>
+          <div class="para">
+            <h3><span>§ 5</span>Laufzeit und Kündigung</h3>
+            <p>Der Vertrag läuft unbefristet und ist von keiner Seite kündbar. Bei Ringverlust wird er trotzdem nicht
+              gekündigt, der Auftraggeber redet dann nur zwei Wochen nicht mit dem Auftragnehmer.</p>
+          </div>
+          <div class="para">
+            <h3><span>§ 6</span>Schlussbestimmung</h3>
+            <p>Beide Parteien bestätigen, dass dieser Vertrag reine Formsache ist und die Sache seit ungefähr 28 Jahren
+              geklärt war.</p>
+          </div>
+
+          <div class="unterschriften">
+            <div class="sig fixed">
+              <canvas id="sig-ag" width="600" height="240"></canvas>
+              <div class="vorgedruckt" data-c="auftraggeber"></div>
+              <div class="name"><span>Auftraggeber, <span id="datum2"></span></span></div>
+            </div>
+            <div class="sig" id="sig-wrap">
+              <canvas id="sig-an" width="600" height="240"></canvas>
+              <div class="hint">Hier unterschreiben (Finger oder Maus)</div>
+              <div class="name"><span>Auftragnehmer</span><button type="button" id="sig-clear">Nochmal</button></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="aktion">
+          <button class="btn" id="annehmen" type="button">Job annehmen</button>
+          <span class="note" id="note">Unterschrift oben erforderlich. Reihenfolge ist dem Amt wichtig.</span>
+        </div>
+
+        <div class="bescheid" id="bescheid">
+          <div class="stempel">Angenommen<small id="datum3"></small></div>
+          <div class="label">Bescheid</div>
+          <div class="gross">Willkommen im Team, <span data-c="bewerber"></span>.</div>
+          <p>Das Amt stellt fest: Eignung war nie die Frage. Der Vorgang ist damit abgeschlossen, die Akte bleibt offen
+            bis zum Hochzeitstag.</p>
+          <div class="naechste">
+            <span class="label">Nächster Schritt</span><span>Anstoßen. Das Bier vor dir ist bereits Teil der Vergütung
+              nach § 4.</span>
+            <span class="label">Dann</span><span>JGA-Termin blocken. Anzug anprobieren. Ringe noch nicht, die gibt es
+              später.</span>
+            <span class="label">Widerspruch</span><span>Nicht vorgesehen.</span>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        Dieses Dokument wurde maschinell erstellt und ist ohne Unterschrift gültig, mit Unterschrift schöner.<br>
+        Amt für Trauzeugenangelegenheiten · Az. <span id="az2"></span> · Rechtsmittelbelehrung: keine.
+      </footer>
+
     </div>
-
-    <div class="aktion">
-      <button class="btn" id="annehmen" type="button">Job annehmen</button>
-      <span class="note" id="note">Unterschrift oben erforderlich. Reihenfolge ist dem Amt wichtig.</span>
-    </div>
-
-    <div class="bescheid" id="bescheid">
-      <div class="stempel">Angenommen<small id="datum3"></small></div>
-      <div class="label">Bescheid</div>
-      <div class="gross">Willkommen im Team, <span data-c="bewerber"></span>.</div>
-      <p>Das Amt stellt fest: Eignung war nie die Frage. Der Vorgang ist damit abgeschlossen, die Akte bleibt offen bis zum Hochzeitstag.</p>
-      <div class="naechste">
-        <span class="label">Nächster Schritt</span><span>Anstoßen. Das Bier vor dir ist bereits Teil der Vergütung nach § 4.</span>
-        <span class="label">Dann</span><span>JGA-Termin blocken. Anzug anprobieren. Ringe noch nicht, die gibt es später.</span>
-        <span class="label">Widerspruch</span><span>Nicht vorgesehen.</span>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    Dieses Dokument wurde maschinell erstellt und ist ohne Unterschrift gültig, mit Unterschrift schöner.<br>
-    Amt für Trauzeugenangelegenheiten · Az. <span id="az2"></span> · Rechtsmittelbelehrung: keine.
-  </footer>
-
-</div></div>
+  </div>
 </body>
+
 </html>
