@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "steps": {
+    "build": {
+      "inputs": [{ "step": "install" }],
+      "commands": [
+        { "path": "/app/.venv/bin" },
+        "python build.py"
+      ],
+      "deployOutputs": ["dist"]
+    }
+  },
+  "deploy": {
+    "startCommand": "python -m http.server ${PORT:-3000} --directory dist"
+  }
+}
