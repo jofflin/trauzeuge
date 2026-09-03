@@ -1,23 +1,107 @@
 {
-  "Oma Anna_2 - 102.jpg":       {"caption": "Erste gemeinsame Immobilie",      "date": "ca. 1999",   "order": 0},
-  "PICT0008 (2).JPG":           {"caption": "Verhandlungsposition",             "date": "ca. 1999",   "order": 1},
-  "Oma Anna_2 - 094.jpg":       {"caption": "Kutschfahrt, Familienarchiv",      "date": "frühe 2000er", "order": 2},
-  "19-03-30 23-50-40 2420.jpg": {"caption": "Nachtsitzung, drei Mann, drei Flaschen"},
-  "19-05-30 17-41-17 3191.jpg": {"caption": "Freiluftsitzung"},
-  "19-06-01 04-06-07 3267.jpg": {"caption": "Protokoll um 04:06 Uhr"},
-  "19-09-14 18-28-58 4535.jpg": {"caption": "Generalprobe in Fliege"},
-  "20-06-11 17-43-03 6766.jpg": {"caption": "Feldarbeit ohne Sonnenschutz"},
-  "20-09-26 16-41-58 ca63.jpg": {"caption": "Diplomatische Mission"},
-  "22-02-18 17-39-05 0385.jpg": {"caption": "Bewerbungsfoto, Entwurf 1"},
-  "22-05-19 21-48-59 1041.jpg": {"caption": "Fachkräfte im Spiegelkabinett"},
-  "22-05-21 21-06-19 1063.jpg": {"caption": "Stehplatz, drei Becher"},
-  "22-05-27 14-07-58 f358.jpg": {"caption": "Betriebsausflug"},
-  "22-08-24 00-23-19 1691.jpg": {"caption": "Rufbereitschaft"},
-  "23-01-07 17-54-31 4422.jpg": {"caption": "Mannschaftssitzung"},
-  "23-05-13 01-23-25 A7D2.jpg": {"caption": "Qualitätskontrolle"},
-  "23-07-29 13-35-21 2409.jpg": {"caption": "Vereinsleben"},
-  "23-08-19 20-39-45 2106.jpg": {"caption": "Anzug sitzt. Bestätigt."},
-  "23-08-19 20-42-14 2147.jpg": {"caption": "Zeugen anwesend"},
-  "IMG_7938.jpg":               {"caption": "Auswärtsfahrt, Augsburg",           "date": "04.10.2025", "order": 20251004},
-  "26-08-17 13-31-28 8956.jpg": {"caption": "Vorbesprechung, Freiluft"}
+  "1999-zelt.jpg": {
+    "caption": "Erste gemeinsame Immobilie",
+    "date": "ca. 1999",
+    "order": 0
+  },
+  "1999-sofa.jpg": {
+    "caption": "Verhandlungsposition",
+    "date": "ca. 1999",
+    "order": 1
+  },
+  "2000er-kutsche.jpg": {
+    "caption": "Kutschfahrt, Familienarchiv",
+    "date": "frühe 2000er",
+    "order": 2
+  },
+  "2019-03-30.jpg": {
+    "caption": "Nachtsitzung, drei Mann, drei Flaschen",
+    "date": "30.03.2019",
+    "order": 20190330
+  },
+  "2019-05-30.jpg": {
+    "caption": "Freiluftsitzung",
+    "date": "30.05.2019",
+    "order": 20190530
+  },
+  "2019-06-01.jpg": {
+    "caption": "Protokoll um 04:06 Uhr",
+    "date": "01.06.2019",
+    "order": 20190601
+  },
+  "2019-09-14.jpg": {
+    "caption": "Generalprobe in Fliege",
+    "date": "14.09.2019",
+    "order": 20190914
+  },
+  "2020-06-11.jpg": {
+    "caption": "Feldarbeit ohne Sonnenschutz",
+    "date": "11.06.2020",
+    "order": 20200611
+  },
+  "2020-09-26.jpg": {
+    "caption": "Diplomatische Mission",
+    "date": "26.09.2020",
+    "order": 20200926
+  },
+  "2022-02-18.jpg": {
+    "caption": "Bewerbungsfoto, Entwurf 1",
+    "date": "18.02.2022",
+    "order": 20220218
+  },
+  "2022-05-19.jpg": {
+    "caption": "Fachkräfte im Spiegelkabinett",
+    "date": "19.05.2022",
+    "order": 20220519
+  },
+  "2022-05-21.jpg": {
+    "caption": "Stehplatz, drei Becher",
+    "date": "21.05.2022",
+    "order": 20220521
+  },
+  "2022-05-27.jpg": {
+    "caption": "Betriebsausflug",
+    "date": "27.05.2022",
+    "order": 20220527
+  },
+  "2022-08-24.jpg": {
+    "caption": "Rufbereitschaft",
+    "date": "24.08.2022",
+    "order": 20220824
+  },
+  "2023-01-07.jpg": {
+    "caption": "Mannschaftssitzung",
+    "date": "07.01.2023",
+    "order": 20230107
+  },
+  "2023-05-13.jpg": {
+    "caption": "Qualitätskontrolle",
+    "date": "13.05.2023",
+    "order": 20230513
+  },
+  "2023-07-29.jpg": {
+    "caption": "Vereinsleben",
+    "date": "29.07.2023",
+    "order": 20230729
+  },
+  "2023-08-19a.jpg": {
+    "caption": "Anzug sitzt. Bestätigt.",
+    "date": "19.08.2023",
+    "order": 20230819
+  },
+  "2023-08-19b.jpg": {
+    "caption": "Zeugen anwesend",
+    "date": "19.08.2023",
+    "order": 20230819
+  },
+  "2025-10-04.jpg": {
+    "caption": "Auswärtsfahrt, Augsburg",
+    "date": "04.10.2025",
+    "order": 20251004
+  },
+  "2026-08-17.jpg": {
+    "caption": "Vorbesprechung, Freiluft",
+    "date": "17.08.2026",
+    "order": 20260817
+  }
 }
